@@ -350,7 +350,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/bash;
-			shellScript = "set -e\nsh \"${SOURCE_ROOT}/ProductPackaging.sh\"\nexit 0";
+			shellScript = "set -e\nsh \"${SOURCE_ROOT}/ProductPackaging.sh\"\nexit $?";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -562,6 +562,7 @@
 				47E697A219F73DF70009E243 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		47E697A319F73DF70009E243 /* Build configuration list for PBXNativeTarget "TestSparkleFrameworkTests" */ = {
 			isa = XCConfigurationList;
@@ -570,6 +571,7 @@
 				47E697A519F73DF70009E243 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

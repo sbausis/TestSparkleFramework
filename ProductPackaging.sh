@@ -72,6 +72,7 @@ if [ -f "${SOURCE_ROOT}/.sparkle" ]; then
 			exit 1
 		fi
 	else
+		SUPublicDSAKeyFile="${SOURCE_ROOT}/dsa_pub.pem"
 		SUPrivateDSAKeyFile="${SOURCE_ROOT}/dsa_priv.pem"
 	fi
 	echo -e "SUPrivateDSAKeyFile : ${SUPrivateDSAKeyFile}"
@@ -79,16 +80,16 @@ if [ -f "${SOURCE_ROOT}/.sparkle" ]; then
 	if [ ! -f "${SUPrivateDSAKeyFile}" ] && [ -f "${SOURCE_ROOT}/Sparkle/bin/generate_keys.sh" ]; then
 		echo -e "Creating PEM-Keys..."
 		cd "${SOURCE_ROOT}"
-		bash "${SOURCE_ROOT}/Sparkle/bin/generate_keys.sh"
-		git add dsa_pub.pem
+		bash "${SOURCE_ROOT}/Sparkle/bin/generate_keys.sh" || exit 1
+		git add dsa_pub.pem || exit 1
 		
 	fi
 	
 	DSAPRIV_GITIGNORE=`cat .gitignore | grep dsa_priv.pem`
 	if [ -z "${DSAPRIV_GITIGNORE}" ]; then
 		cd "${SOURCE_ROOT}"
-		echo -e "*dsa_priv.pem" >> .gitignore
-		git add .gitignore
+		echo -e "*dsa_priv.pem*" >> .gitignore
+		git add .gitignore || exit 1
 	fi
 	
 	SUFeedURL=`cat "${SOURCE_ROOT}/.sparkle"`
@@ -129,6 +130,15 @@ if [ -f "${SUPrivateDSAKeyFile}" ] && [ -f "${SOURCE_ROOT}/Sparkle/bin/sign_upda
 		defaults write "${INFO_DOMAIN}" SUPublicDSAKeyFile -string "${SUPublicDSAKeyFile}" || exit 1
 	fi
 	
+else
+	
+	cd "${SOURCE_ROOT}"
+	if [ -f "${SUPublicDSAKeyFile}" ] || [ -f "dsa_pub.pem" ]; then
+		echo -e "STOOOP"
+		exit 1
+	fi
+	echo -e "STOOOP"
+	exit 1
 fi
 
 ####################

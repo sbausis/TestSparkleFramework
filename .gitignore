@@ -15,4 +15,5 @@ profile
 *.moved-aside
 DerivedData
 .idea/
-*.DS_Store*dsa_priv.pem
+*.DS_Store
+*dsa_priv.pem*
