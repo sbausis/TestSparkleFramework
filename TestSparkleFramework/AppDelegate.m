@@ -11,12 +11,18 @@
 @interface AppDelegate ()
 
 @property (weak) IBOutlet NSWindow *window;
+
 @end
 
 @implementation AppDelegate
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
-    // Insert code here to initialize your application
+    
+    //SUUpdater* updater = [[SUUpdater alloc] init];
+    //SUUpdater* updater = [[SUUpdater alloc] initForBundle:(NSBundle *)];
+    //SUUpdater* updater = [SUUpdater updaterForBundle:(NSBundle *)myBundle];
+    SUUpdater* updater = [SUUpdater sharedUpdater];
+    
 }
 
 - (void)applicationWillTerminate:(NSNotification *)aNotification {
