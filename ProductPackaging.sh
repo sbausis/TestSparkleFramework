@@ -68,7 +68,7 @@ if [ -f "${SOURCE_ROOT}/.sparkle" ]; then
 			SUPrivateDSAKeyFile="${SOURCE_ROOT}/dsa_priv.pem"
 		fi
 		if [ ! -f "${SUPrivateDSAKeyFile}" ]; then
-			echo -e "ERROR - ${SUPrivateDSAKeyFile} - DSA Public Key not found..."
+			echo -e "ERROR - ${SUPrivateDSAKeyFile} - DSA Private Key not found..."
 			exit 1
 		fi
 	else
@@ -126,9 +126,9 @@ if [ -f "${SUPrivateDSAKeyFile}" ] && [ -f "${SOURCE_ROOT}/Sparkle/bin/sign_upda
 	fi
 	
 	if [ -z "${SUPublicDSAKeyFile}" ]; then
-		SUPublicDSAKeyFile="dsa_pub.pem"
-		defaults write "${INFO_DOMAIN}" SUPublicDSAKeyFile -string "${SUPublicDSAKeyFile}" || exit 1
-	fi
+		SUPublicDSAKeyFile="./dsa_pub.pem"
+	fi	
+	defaults write "${INFO_DOMAIN}" SUPublicDSAKeyFile -string "${SUPublicDSAKeyFile##*/}" || exit 1
 	
 else
 	

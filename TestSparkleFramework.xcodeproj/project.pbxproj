@@ -6,19 +6,33 @@
 	objectVersion = 46;
 	objects = {
 
+/* Begin PBXAggregateTarget section */
+		47E4787F19F9226A00AF9D05 /* ReleaseUpdate */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 47E4788019F9226A00AF9D05 /* Build configuration list for PBXAggregateTarget "ReleaseUpdate" */;
+			buildPhases = (
+				47E4788519F9227700AF9D05 /* ShellScript */,
+			);
+			dependencies = (
+				47E4788419F9227100AF9D05 /* PBXTargetDependency */,
+			);
+			name = ReleaseUpdate;
+			productName = ReleaseUpdate;
+		};
+/* End PBXAggregateTarget section */
+
 /* Begin PBXBuildFile section */
+		47E4787E19F8871800AF9D05 /* dsa_pub.pem in Resources */ = {isa = PBXBuildFile; fileRef = 47E4787D19F8871800AF9D05 /* dsa_pub.pem */; };
 		47E6978919F73DF70009E243 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 47E6978819F73DF70009E243 /* main.m */; };
 		47E6978C19F73DF70009E243 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 47E6978B19F73DF70009E243 /* AppDelegate.m */; };
 		47E6978E19F73DF70009E243 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 47E6978D19F73DF70009E243 /* Images.xcassets */; };
 		47E6979119F73DF70009E243 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 47E6978F19F73DF70009E243 /* MainMenu.xib */; };
-		47E6979D19F73DF70009E243 /* TestSparkleFrameworkTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 47E6979C19F73DF70009E243 /* TestSparkleFrameworkTests.m */; };
-		47E697A719F73E6B0009E243 /* ProductPackaging.sh in Resources */ = {isa = PBXBuildFile; fileRef = 47E697A619F73E6B0009E243 /* ProductPackaging.sh */; };
 		47E697C119F73F0E0009E243 /* Sparkle.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 47E697B419F73EE00009E243 /* Sparkle.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		47E697C319F73F190009E243 /* Sparkle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 47E697C219F73F190009E243 /* Sparkle.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		47E6979719F73DF70009E243 /* PBXContainerItemProxy */ = {
+		47E4788319F9227100AF9D05 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 47E6977B19F73DF70009E243 /* Project object */;
 			proxyType = 1;
@@ -83,6 +97,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		47E4787D19F8871800AF9D05 /* dsa_pub.pem */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = dsa_pub.pem; sourceTree = SOURCE_ROOT; };
 		47E6978319F73DF70009E243 /* TestSparkleFramework.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestSparkleFramework.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		47E6978719F73DF70009E243 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		47E6978819F73DF70009E243 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -90,10 +105,7 @@
 		47E6978B19F73DF70009E243 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		47E6978D19F73DF70009E243 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		47E6979019F73DF70009E243 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
-		47E6979619F73DF70009E243 /* TestSparkleFrameworkTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TestSparkleFrameworkTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		47E6979B19F73DF70009E243 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		47E6979C19F73DF70009E243 /* TestSparkleFrameworkTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestSparkleFrameworkTests.m; sourceTree = "<group>"; };
-		47E697A619F73E6B0009E243 /* ProductPackaging.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = ProductPackaging.sh; sourceTree = "<group>"; };
+		47E697A619F73E6B0009E243 /* ProductPackaging.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; name = ProductPackaging.sh; path = ../ProductPackaging.sh; sourceTree = "<group>"; };
 		47E697A819F73EE00009E243 /* Sparkle.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Sparkle.xcodeproj; path = Sparkle/Sparkle.xcodeproj; sourceTree = "<group>"; };
 		47E697C219F73F190009E243 /* Sparkle.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Sparkle.framework; path = "../../Library/Developer/Xcode/DerivedData/TestSparkleFramework-egepqmxgqvtxwpcvwnszuuhjnigf/Build/Products/Debug/Sparkle.framework"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -107,13 +119,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		47E6979319F73DF70009E243 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -121,9 +126,7 @@
 			isa = PBXGroup;
 			children = (
 				47E697A819F73EE00009E243 /* Sparkle.xcodeproj */,
-				47E697A619F73E6B0009E243 /* ProductPackaging.sh */,
 				47E6978519F73DF70009E243 /* TestSparkleFramework */,
-				47E6979919F73DF70009E243 /* TestSparkleFrameworkTests */,
 				47E697BE19F73EF80009E243 /* Frameworks */,
 				47E6978419F73DF70009E243 /* Products */,
 			);
@@ -133,7 +136,6 @@
 			isa = PBXGroup;
 			children = (
 				47E6978319F73DF70009E243 /* TestSparkleFramework.app */,
-				47E6979619F73DF70009E243 /* TestSparkleFrameworkTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -153,25 +155,10 @@
 		47E6978619F73DF70009E243 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				47E697A619F73E6B0009E243 /* ProductPackaging.sh */,
+				47E4787D19F8871800AF9D05 /* dsa_pub.pem */,
 				47E6978719F73DF70009E243 /* Info.plist */,
 				47E6978819F73DF70009E243 /* main.m */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		47E6979919F73DF70009E243 /* TestSparkleFrameworkTests */ = {
-			isa = PBXGroup;
-			children = (
-				47E6979C19F73DF70009E243 /* TestSparkleFrameworkTests.m */,
-				47E6979A19F73DF70009E243 /* Supporting Files */,
-			);
-			path = TestSparkleFrameworkTests;
-			sourceTree = "<group>";
-		};
-		47E6979A19F73DF70009E243 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				47E6979B19F73DF70009E243 /* Info.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -207,7 +194,6 @@
 				47E6978019F73DF70009E243 /* Frameworks */,
 				47E6978119F73DF70009E243 /* Resources */,
 				47E697BD19F73EF20009E243 /* CopyFiles */,
-				47E697C419F73FBA0009E243 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -219,24 +205,6 @@
 			productReference = 47E6978319F73DF70009E243 /* TestSparkleFramework.app */;
 			productType = "com.apple.product-type.application";
 		};
-		47E6979519F73DF70009E243 /* TestSparkleFrameworkTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 47E697A319F73DF70009E243 /* Build configuration list for PBXNativeTarget "TestSparkleFrameworkTests" */;
-			buildPhases = (
-				47E6979219F73DF70009E243 /* Sources */,
-				47E6979319F73DF70009E243 /* Frameworks */,
-				47E6979419F73DF70009E243 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				47E6979819F73DF70009E243 /* PBXTargetDependency */,
-			);
-			name = TestSparkleFrameworkTests;
-			productName = TestSparkleFrameworkTests;
-			productReference = 47E6979619F73DF70009E243 /* TestSparkleFrameworkTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -246,12 +214,11 @@
 				LastUpgradeCheck = 0600;
 				ORGANIZATIONNAME = "Simon Pascal Baur";
 				TargetAttributes = {
-					47E6978219F73DF70009E243 = {
+					47E4787F19F9226A00AF9D05 = {
 						CreatedOnToolsVersion = 6.0.1;
 					};
-					47E6979519F73DF70009E243 = {
+					47E6978219F73DF70009E243 = {
 						CreatedOnToolsVersion = 6.0.1;
-						TestTargetID = 47E6978219F73DF70009E243;
 					};
 				};
 			};
@@ -275,7 +242,7 @@
 			projectRoot = "";
 			targets = (
 				47E6978219F73DF70009E243 /* TestSparkleFramework */,
-				47E6979519F73DF70009E243 /* TestSparkleFrameworkTests */,
+				47E4787F19F9226A00AF9D05 /* ReleaseUpdate */,
 			);
 		};
 /* End PBXProject section */
@@ -324,33 +291,27 @@
 			buildActionMask = 2147483647;
 			files = (
 				47E6978E19F73DF70009E243 /* Images.xcassets in Resources */,
-				47E697A719F73E6B0009E243 /* ProductPackaging.sh in Resources */,
+				47E4787E19F8871800AF9D05 /* dsa_pub.pem in Resources */,
 				47E6979119F73DF70009E243 /* MainMenu.xib in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		47E6979419F73DF70009E243 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		47E697C419F73FBA0009E243 /* ShellScript */ = {
+		47E4788519F9227700AF9D05 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
+				"$(SRCROOT)/dsa_priv.pem",
 			);
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/bash;
-			shellScript = "set -e\nsh \"${SOURCE_ROOT}/ProductPackaging.sh\"\nexit $?";
+			shellScript = "set -e\nexit 1\nsh \"${SOURCE_ROOT}/ProductPackaging.sh\"\nexit $?";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -364,21 +325,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		47E6979219F73DF70009E243 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				47E6979D19F73DF70009E243 /* TestSparkleFrameworkTests.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		47E6979819F73DF70009E243 /* PBXTargetDependency */ = {
+		47E4788419F9227100AF9D05 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 47E6978219F73DF70009E243 /* TestSparkleFramework */;
-			targetProxy = 47E6979719F73DF70009E243 /* PBXContainerItemProxy */;
+			targetProxy = 47E4788319F9227100AF9D05 /* PBXContainerItemProxy */;
 		};
 		47E697C019F73F050009E243 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -399,6 +352,20 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		47E4788119F9226A00AF9D05 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		47E4788219F9226A00AF9D05 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 		47E6979E19F73DF70009E243 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -507,45 +474,17 @@
 			};
 			name = Release;
 		};
-		47E697A419F73DF70009E243 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				COMBINE_HIDPI_IMAGES = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-					"$(inherited)",
-				);
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = TestSparkleFrameworkTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TestSparkleFramework.app/Contents/MacOS/TestSparkleFramework";
-			};
-			name = Debug;
-		};
-		47E697A519F73DF70009E243 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				COMBINE_HIDPI_IMAGES = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = TestSparkleFrameworkTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TestSparkleFramework.app/Contents/MacOS/TestSparkleFramework";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		47E4788019F9226A00AF9D05 /* Build configuration list for PBXAggregateTarget "ReleaseUpdate" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				47E4788119F9226A00AF9D05 /* Debug */,
+				47E4788219F9226A00AF9D05 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		47E6977E19F73DF70009E243 /* Build configuration list for PBXProject "TestSparkleFramework" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -560,15 +499,6 @@
 			buildConfigurations = (
 				47E697A119F73DF70009E243 /* Debug */,
 				47E697A219F73DF70009E243 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		47E697A319F73DF70009E243 /* Build configuration list for PBXNativeTarget "TestSparkleFrameworkTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				47E697A419F73DF70009E243 /* Debug */,
-				47E697A519F73DF70009E243 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
