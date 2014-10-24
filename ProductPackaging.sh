@@ -11,20 +11,29 @@ set -x
 
 ####################
 
+if [ "_${CONFIGURATION}" != "_Release" ]; then
+	exit 0
+fi
+
 INFO_PLIST="${BUILT_PRODUCTS_DIR}/${INFOPLIST_PATH}"
 echo -e "INFO_PLIST : ${INFO_PLIST}"
+[ -z "${INFO_PLIST}" ] && exit 1
 
 INFO_DOMAIN="${INFO_PLIST%/Info.plist}/Info"
 echo -e "INFO_DOMAIN : ${INFO_DOMAIN}"
+[ -z "${INFO_DOMAIN}" ] && exit 1
 
 PRODUCT="${BUILT_PRODUCTS_DIR}/${FULL_PRODUCT_NAME}"
 echo -e "PRODUCT : ${PRODUCT}"
+[ -z "${PRODUCT}" ] && exit 1
 
 CFBundleVersion=`defaults read "${INFO_DOMAIN}" CFBundleVersion`
 echo -e "CFBundleVersion : ${CFBundleVersion}"
+[ -z "${CFBundleVersion}" ] && exit 1
 
 CFBundleShortVersionString=`defaults read "${INFO_DOMAIN}" CFBundleShortVersionString`
 echo -e "CFBundleShortVersionString : ${CFBundleShortVersionString}"
+[ -z "${CFBundleShortVersionString}" ] && exit 1
 
 if [ -n "${CFBundleVersion}" ]; then
 	ARCHIVE="${PRODUCT%.*}_v${CFBundleVersion}.tar.gz"
@@ -32,12 +41,13 @@ else
 	ARCHIVE="${PRODUCT%.*}.tar.gz"
 fi
 echo -e "ARCHIVE : ${ARCHIVE}"
+[ -z "${ARCHIVE}" ] && exit 1
 
 if [ -f "${SOURCE_ROOT}/.sparkle" ]; then
 	
 	cd "${SOURCE_ROOT}"
     git add .sparkle
-
+  
     if [ ! -d "${SOURCE_ROOT}/Sparkle/bin" ]; then
 		
 		cd "${SOURCE_ROOT}"

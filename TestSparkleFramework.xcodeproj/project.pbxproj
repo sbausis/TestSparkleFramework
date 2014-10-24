@@ -6,21 +6,6 @@
 	objectVersion = 46;
 	objects = {
 
-/* Begin PBXAggregateTarget section */
-		47E4787F19F9226A00AF9D05 /* ReleaseUpdate */ = {
-			isa = PBXAggregateTarget;
-			buildConfigurationList = 47E4788019F9226A00AF9D05 /* Build configuration list for PBXAggregateTarget "ReleaseUpdate" */;
-			buildPhases = (
-				47E4788519F9227700AF9D05 /* ShellScript */,
-			);
-			dependencies = (
-				47E4788419F9227100AF9D05 /* PBXTargetDependency */,
-			);
-			name = ReleaseUpdate;
-			productName = ReleaseUpdate;
-		};
-/* End PBXAggregateTarget section */
-
 /* Begin PBXBuildFile section */
 		47E4787E19F8871800AF9D05 /* dsa_pub.pem in Resources */ = {isa = PBXBuildFile; fileRef = 47E4787D19F8871800AF9D05 /* dsa_pub.pem */; };
 		47E6978919F73DF70009E243 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 47E6978819F73DF70009E243 /* main.m */; };
@@ -32,13 +17,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		47E4788319F9227100AF9D05 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 47E6977B19F73DF70009E243 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 47E6978219F73DF70009E243;
-			remoteInfo = TestSparkleFramework;
-		};
 		47E697B319F73EE00009E243 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 47E697A819F73EE00009E243 /* Sparkle.xcodeproj */;
@@ -194,6 +172,7 @@
 				47E6978019F73DF70009E243 /* Frameworks */,
 				47E6978119F73DF70009E243 /* Resources */,
 				47E697BD19F73EF20009E243 /* CopyFiles */,
+				47E4788619F9C77500AF9D05 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -214,9 +193,6 @@
 				LastUpgradeCheck = 0600;
 				ORGANIZATIONNAME = "Simon Pascal Baur";
 				TargetAttributes = {
-					47E4787F19F9226A00AF9D05 = {
-						CreatedOnToolsVersion = 6.0.1;
-					};
 					47E6978219F73DF70009E243 = {
 						CreatedOnToolsVersion = 6.0.1;
 					};
@@ -242,7 +218,6 @@
 			projectRoot = "";
 			targets = (
 				47E6978219F73DF70009E243 /* TestSparkleFramework */,
-				47E4787F19F9226A00AF9D05 /* ReleaseUpdate */,
 			);
 		};
 /* End PBXProject section */
@@ -299,19 +274,18 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		47E4788519F9227700AF9D05 /* ShellScript */ = {
+		47E4788619F9C77500AF9D05 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
-				"$(SRCROOT)/dsa_priv.pem",
 			);
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/bash;
-			shellScript = "set -e\nexit 1\nsh \"${SOURCE_ROOT}/ProductPackaging.sh\"\nexit $?";
+			shellScript = "set -e\nsh \"${SOURCE_ROOT}/ProductPackaging.sh\"\nexit $?";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -328,11 +302,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		47E4788419F9227100AF9D05 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 47E6978219F73DF70009E243 /* TestSparkleFramework */;
-			targetProxy = 47E4788319F9227100AF9D05 /* PBXContainerItemProxy */;
-		};
 		47E697C019F73F050009E243 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = Sparkle;
@@ -352,20 +321,6 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		47E4788119F9226A00AF9D05 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Debug;
-		};
-		47E4788219F9226A00AF9D05 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Release;
-		};
 		47E6979E19F73DF70009E243 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -477,14 +432,6 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		47E4788019F9226A00AF9D05 /* Build configuration list for PBXAggregateTarget "ReleaseUpdate" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				47E4788119F9226A00AF9D05 /* Debug */,
-				47E4788219F9226A00AF9D05 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-		};
 		47E6977E19F73DF70009E243 /* Build configuration list for PBXProject "TestSparkleFramework" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
